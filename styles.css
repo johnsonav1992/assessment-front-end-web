@@ -31,6 +31,10 @@ a {
 	font-size: 1.25rem;
 }
 
+a:hover {
+	color: rgb(247, 207, 133);
+}
+
 a:visited {
 	color: crimson;
 }

@@ -1,5 +1,3 @@
-
-
 let restaurantButton = document.querySelector('.restaurant-button')
 let restNotification = document.createElement('h1')
 let body = document.querySelector('body')

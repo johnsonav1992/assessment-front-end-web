@@ -6,16 +6,18 @@ let body = document.querySelector('body')
     body.append(restNotification)
 
 restaurantButton.addEventListener('click', () => {
-    let restaurants = ['Simply Thai', 'WhoDaq', 'IHOP', "Lupe's Tex-Mex & Grill", 'Waffle House', "Niki's Italian Bistro"]
+    let restaurants = document.querySelectorAll('.p-links')
+    console.log(restaurants)
 
     let randomRestaurant = Math.floor(Math.random() * restaurants.length)
-    console.log(randomRestaurant)
-
     let randomChosenRestaurant = restaurants[randomRestaurant]
-    console.log(randomChosenRestaurant)
-    restNotification.textContent = `You should go eat at ${randomChosenRestaurant}!`
+    
+    restNotification.textContent = `You should go eat at ${randomChosenRestaurant.innerHTML}!`
     restNotification.classList.remove('hide')
     setTimeout(() => {
         restNotification.classList.add('hide')
     }, 2000)
+    setTimeout(() => {
+    window.open(randomChosenRestaurant.href, 'blank')
+}, 2000)
 })
